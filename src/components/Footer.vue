@@ -16,7 +16,7 @@ const links = {
 
 <template>
   <footer class="bg-farm-700 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 footer-info">
       <!-- Main Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Contact Info -->
@@ -40,7 +40,7 @@ const links = {
         <!-- Social Links -->
         <div>
           <h3 class="text-xl font-semibold mb-4">Seguici</h3>
-          <div class="flex space-x-4">
+          <div>
             <a
               v-for="social in links.social"
               :key="social.name"
@@ -61,3 +61,9 @@ const links = {
     </div>
   </footer>
 </template>
+
+<style>
+.footer-info{
+  text-align: center;
+}
+</style>
