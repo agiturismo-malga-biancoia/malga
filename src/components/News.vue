@@ -11,7 +11,7 @@ const news: NewsItem[] = [
   {
     title: 'CASEUS 2025',
     date: '2025-10-05',
-    content: '1° Classificato Formaggio di Fattoria Caciotta'
+    content: '1° Classificato Allevo Biancoia'
   },
   {
     title: 'CASEUS 2024',
