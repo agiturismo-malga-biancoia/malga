@@ -19,6 +19,7 @@ const isOpen = ref(false);
       <div class="flex justify-between h-16">
         <div class="flex">
           <div class="flex-shrink-0 flex items-center">
+            <img class="h-10 w-10" src="/new_logo.png" alt="Malga Biancoia Logo" />
             <span class="text-2xl font-bold text-farm-600">Malga Biancoia</span>
           </div>
         </div>

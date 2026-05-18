@@ -16,6 +16,7 @@ defineProps<{
     <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 h-full flex items-center justify-center">
       <div class="text-center max-w-4xl">
         <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">{{ title }}</h1>
+        <img class="mx-auto my-4" src="/new_logo.png" alt="Malga Biancoia Logo" style="height: 197px;"/>
         <p class="mt-6 text-xl text-white">{{ subtitle }}</p>
       </div>
     </div>
