@@ -31,13 +31,7 @@ defineProps<{
         <p class="text-lg text-white/90 leading-relaxed drop-shadow mb-8 max-w-2xl mx-auto">
           {{ subtitle }}
         </p>
-        <div class="flex flex-col sm:flex-row gap-3 justify-center">
-          <a
-            href="tel:+393471094928"
-            class="inline-block bg-farm-500 hover:bg-farm-400 text-white font-semibold px-8 py-3 rounded-sm text-sm tracking-widest uppercase transition-all duration-200 hover:-translate-y-0.5"
-          >
-            Prenota ora
-          </a>
+        <div class="flex justify-center">
           <a
             href="#menu"
             class="inline-block border border-white/60 hover:border-white text-white font-medium px-8 py-3 rounded-sm text-sm tracking-widest uppercase transition-all duration-200 hover:-translate-y-0.5"
