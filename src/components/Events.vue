@@ -65,19 +65,7 @@ const photos = [event1, event2, event3];
             </div>
           </div>
 
-          <!-- Info prenotazione -->
-          <div class="bg-farm-50 border border-farm-200 rounded-xl px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-            <div>
-              <p class="text-sm font-semibold text-farm-800 uppercase tracking-wide">Evento su prenotazione</p>
-              <p class="text-xs text-gray-500 mt-0.5">Per info e prenotazioni contattaci</p>
-            </div>
-            <a
-              href="tel:+393471094928"
-              class="inline-block bg-farm-600 hover:bg-farm-500 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
-            >
-              📞 347 109 4928 – Silvia
-            </a>
-          </div>
+
 
         </div>
       </div>
