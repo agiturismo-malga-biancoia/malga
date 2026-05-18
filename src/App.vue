@@ -4,6 +4,7 @@ import Hero from './components/Hero.vue';
 import Menu from './components/Menu.vue';
 import Itinerary from './components/Itinerary.vue';
 import News from './components/News.vue';
+import Events from './components/Events.vue';
 import Gallery from './components/Gallery.vue';
 import Footer from './components/Footer.vue';
 
@@ -22,6 +23,7 @@ import Footer from './components/Footer.vue';
       <Menu />
       <Itinerary />
       <News />
+      <Events />
       <Gallery />
     </main>
     <Footer />

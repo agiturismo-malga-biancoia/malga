@@ -7,6 +7,7 @@ const navigation = [
   { name: 'Menu', href: '#menu' },
   { name: 'Itinerari', href: '#itinerary' },
   { name: 'News', href: '#news' },
+  { name: 'Eventi', href: '#events' },
   { name: 'Galleria', href: '#gallery' },
 ];
 
