@@ -1,126 +1,87 @@
 <script setup lang="ts">
-interface EventActivity {
-  text: string;
-}
+import event1 from '../images/events/event_1.webp';
+import event2 from '../images/events/event_2.webp';
+import event3 from '../images/events/event_3.webp';
 
-interface Event {
-  title: string;
-  subtitle: string;
-  date: string;
-  time: string;
-  location: string;
-  description: string;
-  activities: EventActivity[];
-  contact: string;
-  instagram: string;
-  bookingRequired: boolean;
-  past: boolean;
-}
-
-const events: Event[] = [
-  {
-    title: '"Su in Malga"',
-    subtitle: 'Piccoli Grandi Chef · Malga Biancoia',
-    date: '2025-07-05',
-    time: 'dalle 09:30 alle 12:00',
-    location: 'Via Biancoia 1, Lusiana Conco (VI)',
-    description: "Un'esperienza unica tra natura, tradizione e gusto!",
-    activities: [
-      { text: 'Visita alla malga e incontro con la vita del malghese' },
-      { text: 'Scopri le fasi della lavorazione del latte' },
-      { text: 'Laboratorio creativo per grandi e piccini: realizza una merenda con la ricotta fatta sul momento!' },
-    ],
-    contact: '347 109 4928 – Silvia',
-    instagram: '@agriturismo_malga_biancoia',
-    bookingRequired: true,
-    past: true,
-  }
-];
-
-const formatDate = (dateStr: string) => {
-  return new Date(dateStr).toLocaleDateString('it-IT', {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  });
-};
+const photos = [event1, event2, event3];
 </script>
 
 <template>
-  <section id="events" class="py-20 bg-white">
+  <section id="events" class="py-20 bg-farm-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Titolo sezione -->
       <h2 class="text-3xl font-bold text-center text-gray-900 mb-2">Eventi</h2>
-      <p class="text-center text-gray-500 text-sm mb-12">Esperienze da vivere alla malga</p>
+      <p class="text-center text-gray-500 text-sm mb-14">Esperienze da vivere alla malga</p>
 
-      <div class="space-y-8 max-w-2xl mx-auto">
-        <article
-          v-for="event in events"
-          :key="event.title"
-          class="bg-farm-50 rounded-xl overflow-hidden border border-farm-100"
-          :class="{ 'opacity-75': event.past }"
-        >
-          <!-- Header -->
-          <div class="bg-farm-600 px-6 py-5 text-white relative">
-            <span
-              v-if="event.past"
-              class="absolute top-4 right-4 text-xs uppercase tracking-widest bg-white/20 text-white px-3 py-1 rounded-full"
-            >Edizione passata</span>
-            <h3 class="text-2xl font-bold font-serif italic">{{ event.title }}</h3>
-            <p class="text-farm-100 text-sm font-semibold uppercase tracking-wider mt-1">{{ event.subtitle }}</p>
+      <!-- Card evento -->
+      <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm border border-farm-100 overflow-hidden">
+
+        <!-- Header verde -->
+        <div class="bg-farm-600 px-8 py-6 text-white">
+          <p class="text-xs uppercase tracking-widest text-farm-200 mb-1">Evento</p>
+          <h3 class="text-3xl font-bold italic">"Su in Malga"</h3>
+          <p class="text-farm-100 text-sm font-semibold uppercase tracking-wider mt-1">Piccoli Grandi Chef · Malga Biancoia</p>
+        </div>
+
+        <!-- Corpo -->
+        <div class="px-8 py-8 space-y-8">
+
+          <!-- Descrizione -->
+          <p class="text-gray-600 text-base leading-relaxed italic border-l-4 border-farm-300 pl-4">
+            Un'esperienza unica tra natura, tradizione e gusto: portiamo grandi e piccini a scoprire la vita autentica della malga, dal pascolo delle mucche alla magia della lavorazione del latte.
+          </p>
+
+          <!-- Cosa ti aspetta -->
+          <div>
+            <h4 class="text-sm font-semibold uppercase tracking-widest text-farm-700 mb-4">Cosa ti aspetta</h4>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3 text-gray-700">
+                <span class="text-farm-500 mt-0.5 flex-shrink-0 font-bold">✦</span>
+                <span><strong class="text-gray-900">Visita alla malga</strong> e incontro con la vita del malghese</span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-700">
+                <span class="text-farm-500 mt-0.5 flex-shrink-0 font-bold">✦</span>
+                <span>Scopri le <strong class="text-gray-900">fasi della lavorazione del latte</strong></span>
+              </li>
+              <li class="flex items-start gap-3 text-gray-700">
+                <span class="text-farm-500 mt-0.5 flex-shrink-0 font-bold">✦</span>
+                <span><strong class="text-gray-900">Laboratorio creativo</strong> per grandi e piccini: realizza una merenda con la ricotta fatta sul momento!</span>
+              </li>
+            </ul>
           </div>
 
-          <!-- Body -->
-          <div class="px-6 py-6 space-y-5">
-            <!-- Info -->
-            <div class="space-y-2 text-sm text-gray-700">
-              <p class="flex items-center gap-2">
-                <span class="text-farm-600">📍</span>
-                {{ event.location }}
-              </p>
-              <p class="flex items-center gap-2">
-                <span class="text-farm-600">📅</span>
-                {{ formatDate(event.date) }}
-              </p>
-              <p class="flex items-center gap-2">
-                <span class="text-farm-600">🕐</span>
-                {{ event.time }}
-              </p>
+          <!-- Foto -->
+          <div>
+            <h4 class="text-sm font-semibold uppercase tracking-widest text-farm-700 mb-4">Le foto dell'evento</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <img
+                v-for="(photo, index) in photos"
+                :key="index"
+                :src="photo"
+                :alt="`Foto evento Su in Malga ${index + 1}`"
+                class="w-full h-52 object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+              />
             </div>
+          </div>
 
-            <p class="text-gray-600 italic text-sm">{{ event.description }}</p>
-
-            <!-- Activities -->
+          <!-- Info prenotazione -->
+          <div class="bg-farm-50 border border-farm-200 rounded-xl px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <div>
-              <p class="text-sm font-semibold text-gray-800 mb-2">Cosa ti aspetta:</p>
-              <ul class="space-y-2">
-                <li
-                  v-for="activity in event.activities"
-                  :key="activity.text"
-                  class="flex items-start gap-2 text-sm text-gray-700"
-                >
-                  <span class="text-farm-500 mt-0.5 flex-shrink-0">✦</span>
-                  {{ activity.text }}
-                </li>
-              </ul>
+              <p class="text-sm font-semibold text-farm-800 uppercase tracking-wide">Evento su prenotazione</p>
+              <p class="text-xs text-gray-500 mt-0.5">Per info e prenotazioni contattaci</p>
             </div>
-
-            <!-- Booking -->
-            <div
-              v-if="event.bookingRequired"
-              class="border border-farm-300 bg-farm-100 rounded-lg px-4 py-3 text-sm text-farm-800 font-semibold text-center tracking-wide uppercase"
+            <a
+              href="tel:+393471094928"
+              class="inline-block bg-farm-600 hover:bg-farm-500 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
             >
-              Evento su prenotazione
-            </div>
-
-            <!-- Contact -->
-            <div class="text-sm text-gray-500 space-y-1">
-              <p>📞 {{ event.contact }}</p>
-              <p>📸 {{ event.instagram }}</p>
-            </div>
+              📞 347 109 4928 – Silvia
+            </a>
           </div>
-        </article>
+
+        </div>
       </div>
+
     </div>
   </section>
 </template>
