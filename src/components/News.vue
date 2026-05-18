@@ -9,7 +9,12 @@ interface NewsItem {
 
 const news: NewsItem[] = [
   {
-    title: 'CASEUS',
+    title: 'CASEUS 2025',
+    date: '2025-10-05',
+    content: '1° Classificato Formaggio di Fattoria Caciotta'
+  },
+  {
+    title: 'CASEUS 2024',
     date: '2024-10-05',
     content: '1° Classificato Formaggio di Fattoria Caciotta'
   },
