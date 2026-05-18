@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import event1 from '../images/events/event_1.webp';
 import event2 from '../images/events/event_2.webp';
-import event3 from '../images/events/event_3.webp';
 
-const photos = [event1, event2, event3];
+const photos = [event1, event2];
 </script>
 
 <template>
@@ -21,7 +20,7 @@ const photos = [event1, event2, event3];
         <div class="bg-farm-600 px-8 py-6 text-white">
           <p class="text-xs uppercase tracking-widest text-farm-200 mb-1">Evento</p>
           <h3 class="text-3xl font-bold italic">"Su in Malga"</h3>
-          <p class="text-farm-100 text-sm font-semibold uppercase tracking-wider mt-1">Piccoli Grandi Chef · Malga Biancoia</p>
+          <p class="text-farm-100 text-sm font-semibold uppercase tracking-wider mt-1">Piccoli Grandi Chef </p>
         </div>
 
         <!-- Corpo -->

@@ -13,7 +13,7 @@ const links = {
   position: { address: 'Via Biancoia, 1 – 36062 Lusiana Conco (VI)' }
 };
 
-const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=Via+Biancoia+1+Lusiana+Conco+VI';
+const mapsUrl = 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x4778c527f1c7431d:0x7b0887fb95c8d603?sa=X&ved=1t:8290&ictx=111';
 </script>
 
 <template>

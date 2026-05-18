@@ -125,8 +125,6 @@ const isActive = (categoryId: string) => activeCategory.value === categoryId;
                   class="px-6 py-4 flex justify-between items-center hover:bg-farm-50 transition-colors"
                 >
                   <span class="text-gray-800 font-medium">{{ item.name }}</span>
-                  <span v-if="item.price" class="text-farm-600 font-semibold text-sm">{{ item.price }}</span>
-                  <span v-else class="text-gray-400 text-xs italic">su richiesta</span>
                 </li>
               </ul>
             </div>
